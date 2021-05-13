@@ -43,7 +43,7 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet("/HelloWorld")
 public class HelloWorldServlet extends HttpServlet {
 
-    static String PAGE_HEADER = "<html><head><title>おはよう世界</title></head><body>";
+    static String PAGE_HEADER = "<html><head><title>Good Morning</title></head><body>";
 
     static String PAGE_FOOTER = "</body></html>";
 
@@ -55,7 +55,7 @@ public class HelloWorldServlet extends HttpServlet {
         resp.setContentType("text/html");
         PrintWriter writer = resp.getWriter();
         writer.println(PAGE_HEADER);
-        writer.println("<h1>" + helloService.createHelloMessage("世界") + "</h1>");
+        writer.println("<h1>" + helloService.createHelloMessage("World") + "</h1>");
         writer.println(PAGE_FOOTER);
         writer.close();
     }
